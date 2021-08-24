@@ -8,9 +8,21 @@
     <link href="https://fonts.googleapis.com/css2?family=Alfa+Slab+One&family=Open+Sans:wght@700&display=swap" rel="stylesheet">   
     <link href="css/estilos.css" rel="stylesheet">  
     <link href="css/font-awesome.min.css" rel="stylesheet">
-    <link href="smooth-scroll.polyfills.min.js">
+ 
     <title>Social Bar</title>
     
+    <!-- Scroll -->    
+    <script src="smooth-scroll.polyfills.min.js"></script>    
+    <script>
+      smoothScroll.init({
+      selector: '[data-scroll]', 
+      selectorHeader: null, 
+      speed: 100000000, // Segundos en cambiar escena
+      easing: 'easeInOutCubic', // 
+      offset: 0, // separacion de pixeles 
+      callback: function ( anchor, toggle ) {} 
+      });
+    </script>
 
 </head>
 <body>
@@ -34,8 +46,8 @@
                 <a class="nav-link" href="#nosotros">Nosotros</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#conocenos">Conocenos</a>
-          </li>
+              <a class="nav-link" href="#visitanos">Conocenos</a>
+          </li>          
         </ul>
     </div> 
  </nav>
@@ -86,7 +98,7 @@
     </div>
     </div>
 
-    <div class="col-md-3">
+    <div class="col-md-3 ">
       <div class="rounded py-3 testimonios">
           
           <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
@@ -184,18 +196,18 @@
         </div>
     </div>  <!-- Cierra div nosotros-->
 
-    <div id="conocenos" class="row py-">
+    <div id="visitanos" class="row py-4"">
        <div class="col-md-8 offset-md-2">
           <h2>Visitanos</h2>
           <div class="embed-responsive embed-responsive-16by9">
             <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1642.0158312578958!2d-58.36433258859055!3d-34.60336085526328!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95a3352fb2f50b8f%3A0x41547c805b1232be!2sJuana%20Manso%20590%2C%20Buenos%20Aires!5e0!3m2!1ses-419!2sar!4v1629758995785!5m2!1ses-419!2sar" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
           </div>
        </div>
-    </div> <!-- cierre div conocenos-->
+    </div> <!-- cierre div visitanos-->
 
-     <div class="col-md-4 mt-4 mt-sm-0 ">
+     <div class="col-md-4 mt-4 mt-sm-0 container-fluid">
         <h2>Contactanos</h2>
-          <form>
+          <form action="" class="flex-column flex-md-row">
               <div class="form-row">
                 <div class="form-group col-md-6">
                       <label for="nombre">Nombre</label>
@@ -205,19 +217,24 @@
                     <label for="apellido">Apellido</label>
                     <input type="text" class="form-control" id="apellido">
                 </div>
-                <div class="form-group">
+                <div class="row">
+                <div class="form-group col-md-6">
                   <label for="email">Email</label>
                   <input type="email" class="form-control" id="mail" placeholder="...">
                 </div> 
-                <div class="form-group">
+                <div class="form-group col-md-6">
                   <label for="tel">Tel</label>
                   <input type="text" class="form-control" id="tel" placeholder="...">
                 </div>
-                <div class="form-group">
+                <div class="form-group col-lg-12">
                   <label for="mensaje">Mensaje</label>
                   <textarea class="form-control" id="mensaje" rows="4"></textarea>
                 </div>
-                <button type="submit" class="btn btn-primary">Enviar</button>
+              </div>
+                <div class="form-group">
+                  <button type="submit" class="btn btn-primary">Enviar</button>
+                </div>
+               
               </div>
           </form>
      </div> <!-- cierre contactanos-->
@@ -233,5 +250,6 @@
  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+ 
 </body>
 </html>
